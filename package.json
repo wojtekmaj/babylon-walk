@@ -9,6 +9,7 @@
     "src"
   ],
   "scripts": {
+    "lint": "eslint .",
     "prepublish": "babel -d lib src"
   },
   "repository": {
@@ -29,6 +30,7 @@
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
-    "@babel/preset-env": "^7.0.0"
+    "@babel/preset-env": "^7.0.0",
+    "eslint": "^6.0.1"
   }
 }
