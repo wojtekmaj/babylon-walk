@@ -9,8 +9,10 @@
   ],
   "scripts": {
     "build": "babel -d dist src",
+    "clean": "rimraf dist",
     "lint": "eslint .",
-    "prepublish": "yarn build"
+    "prepublishOnly": "yarn clean && yarn build",
+    "test": "yarn lint"
   },
   "repository": {
     "type": "git",
