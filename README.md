@@ -58,7 +58,7 @@ In the following example, we are trying to count the number of functions in the 
 
 ```js
 import * as t from 'babel-types';
-import {parse} from 'babylon';
+import { parse } from 'babylon';
 import * as walk from 'babylon-walk';
 
 const visitors = {

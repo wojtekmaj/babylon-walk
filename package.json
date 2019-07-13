@@ -2,15 +2,15 @@
   "name": "babylon-walk",
   "version": "1.0.2",
   "description": "Lightweight Babylon AST traversal",
-  "main": "lib/index.js",
-  "jsnext:main": "src/index.js",
+  "main": "dist/index.js",
   "files": [
-    "lib",
+    "dist",
     "src"
   ],
   "scripts": {
+    "build": "babel -d dist src",
     "lint": "eslint .",
-    "prepublish": "babel -d lib src"
+    "prepublish": "yarn build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,9 @@
     "node": ">= 6.0.0"
   },
   "author": "Timothy Gu <timothygu99@gmail.com>",
+  "contributors": [
+    "Wojciech Maj <kontakt@wojtekmaj.pl>"
+  ],
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.0.0",
