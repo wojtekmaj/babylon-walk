@@ -16,16 +16,14 @@ In my tests, babylon-walk's ancestor walker (the most complex walker provided by
 [babel-traverse]: https://github.com/thejameskyle/babel-handbook/blob/master/translations/en/plugin-handbook.md#toc-babel-traverse
 [walk module]: https://github.com/ternjs/acorn#distwalkjs
 
-## Installation
+### Installation
 
-```sh
-$ npm install babylon-walk
-```
+Add babylon-walk to your project by executing `npm install @wojtekmaj/babylon-walk` or `yarn add @wojtekmaj/babylon-walk`.
 
 ## API
 
 ```js
-var walk = require('babylon-walk');
+const walk = require('@wojtekmaj/babylon-walk');
 ```
 
 ### walk.simple(node, visitors, state)
@@ -59,7 +57,7 @@ In the following example, we are trying to count the number of functions in the 
 ```js
 import * as t from 'babel-types';
 import { parse } from 'babylon';
-import * as walk from 'babylon-walk';
+import * as walk from '@wojtekmaj/babylon-walk';
 
 const visitors = {
   Statement(node, state, c) {
@@ -111,7 +109,7 @@ countFunctions(ast);
 [cache your visitors]: https://github.com/thejameskyle/babel-handbook/blob/master/translations/en/plugin-handbook.md#toc-optimizing-nested-visitors
 [visitors]: https://github.com/thejameskyle/babel-handbook/blob/master/translations/en/plugin-handbook.md#toc-visitors
 
-## Caveat
+## Caveats
 
 For those of you migrating from Acorn to Babylon, there are a few things to be aware of.
 
@@ -124,4 +122,32 @@ For those of you migrating from Acorn to Babylon, there are a few things to be a
 
 ## License
 
-  MIT
+The MIT License.
+
+## Authors
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/TimothyGu.png?s=100" width="100">
+    </td>
+    <td>
+      Timothy Gu<br />
+      <a href="mailto:timothygu99@gmail.com">timothygu99@gmail.com</a><br />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/wojtekmaj.png?s=100" width="100">
+    </td>
+    <td>
+      Wojciech Maj<br />
+      <a href="mailto:kontakt@wojtekmaj.pl">kontakt@wojtekmaj.pl</a><br />
+      <a href="http://wojtekmaj.pl">http://wojtekmaj.pl</a>
+    </td>
+  </tr>
+</table>
+
+## Thank you
+
+This project wouldn't be possible without awesome work of Timothy Gu <timothygu99@gmail.com> who created its initial version. Thank you!
